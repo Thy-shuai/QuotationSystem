@@ -122,7 +122,7 @@ import { plus } from '../../uni_modules/uview-ui/libs/function/digit.js';
 			this.initData();
 			// _doc/uniapp_save/17285298878730.xlsx
 			this.avatarUrl = uni.getStorageSync('avatarUrl');
-			console.log("具体的地址是：", this.avatarUrl);
+			// console.log("具体的地址是：", this.avatarUrl);
 			if (this.avatarUrl.startsWith('http://') || this.avatarUrl.startsWith('https://')){
 				console.log("是网络地址");
 				this.$methods.networkToLocal(this.avatarUrl)
