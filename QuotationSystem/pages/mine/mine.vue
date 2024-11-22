@@ -113,10 +113,10 @@ import { plus } from '../../uni_modules/uview-ui/libs/function/digit.js';
 			console.log("存储的数据是;",JSON.parse(plus.storage.getItem('3aeb4fc9-e525-48e8-b650-0df339d2ff18')));
 		},
 		onShow() {
-			// 数据初始化
-			let namee = '{"data":"200","message":"操作成功","status":100,"timestamp":1731482497902}';
-			const hasStatus = namee.includes('statu');
-			console.log("是否存在：",hasStatus); // 输出: true
+			// 最新数据省略
+			// let namee = '{"data":"200","message":"操作成功","status":100,"timestamp":1731482497902}';
+			// const hasStatus = namee.includes('statu');
+			// console.log("是否存在：",hasStatus); // 输出: true
 			
 			
 			this.initData();
