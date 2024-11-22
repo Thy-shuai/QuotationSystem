@@ -1,0 +1,14 @@
+{
+  "name": "getPhoneNumber",
+  "dependencies": {},
+  "extensions": {
+    "uni-cloud-jql": {},
+    "uni-cloud-verify": {}
+  },
+   "cloudfunction-config": {
+		"memorySize": 512,
+		"timeout": 5,
+		"path": "",
+		"runtime": "Nodejs12" 
+	}
+}

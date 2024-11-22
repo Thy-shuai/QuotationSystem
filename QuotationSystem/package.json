@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "highlight.js": "^11.9.0",
+    "markdown-it": "^14.1.0",
+    "pinyin": "^4.0.0-alpha.0",
+    "vuex": "^3.6.2",
+    "xlsx": "^0.18.5"
+  },
+  "volta": {
+    "node": "12.22.12"
+  }
+}

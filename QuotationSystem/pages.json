@@ -1,0 +1,399 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+		    "path" : "pages/Intelligent/Intelligent",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "智能体",
+		        // "enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"style": "default",
+						"height": "10%",
+						"range": "20%",
+						"contentdown": {
+							"caption": "下拉可刷新自定义文本"
+						}
+					}
+				}
+		    }
+		    
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "报价单",
+				// "enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"style": "default",
+						"height": "10%",
+						"range": "20%",
+						"contentdown": {
+							"caption": "下拉可刷新自定义文本"
+						}
+					},
+					"titleNView": {
+						"buttons": [
+							{
+								"text": "\ue62f",
+								"fontSrc": "./static/top_icon/add/iconfont.ttf",
+								"fontSize": "40rpx",
+								"float": "right"
+							},
+							{
+								"text": "\ue66d",
+								"fontSrc": "./static/top_icon/seacher/iconfont.ttf",
+								"fontSize": "40rpx",
+								"float": "right"
+							}
+						]
+					}
+				}
+			}
+		}
+		,{
+			"path" : "pages/Login/Login",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		}
+	    ,{
+            "path" : "pages/mine/mine",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "我的",
+                "enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"style": "default",
+						"height": "10%",
+						"range": "20%"
+					}
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/ReportForms/ReportForms",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "报表",
+                "enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"style": "default",
+						"height": "10%",
+						"range": "20%"
+					}
+					// "titleNView": {
+					// 	"buttons": [
+					// 		{
+					// 			"text": "\ue62f",
+					// 			"fontSrc": "./static/top_icon/add/iconfont.ttf",
+					// 			"fontSize": "40rpx",
+					// 			"float": "right"
+					// 		},
+					// 		{
+					// 			"text": "\ue66d",
+					// 			"fontSrc": "./static/top_icon/seacher/iconfont.ttf",
+					// 			"fontSize": "40rpx",
+					// 			"float": "rihgt"
+					// 		}
+					// 	]
+					// }
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/Customer/Customer",
+			"style": {
+				"navigationBarTitleText": "客户",
+				// "enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"style": "default",
+						// "height": "50px",
+						"range": "100px"
+					},
+					"titleNView": {
+						"buttons": [
+							{
+								"text": "\ue62f",
+								"fontSrc": "./static/top_icon/add/iconfont.ttf",
+								"fontSize": "40rpx",
+								"float": "right"
+							},
+							{
+								"text": "\ue66d",
+								"fontSrc": "./static/top_icon/seacher/iconfont.ttf",
+								"fontSize": "40rpx",
+								"float": "rihgt"
+							}
+						]
+					}
+				}
+			}
+            
+        },
+		{
+			"path" : "pages/PersonalInformation/PersonalInformation",
+			"style" : 
+			{
+				"navigationBarTitleText" : "个人信息",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/CommunicationBusiness/CommunicationBusiness",
+			"style" : 
+			{
+				// "softinputMode": "adjustResize",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom",
+				"unload": false,
+				"app-plus": {
+					// "bounce":"none"
+						// "animationType": "zoom-out",
+						// "animationDuration": 3000
+					}
+				
+			}
+		},
+		{
+			"path" : "pages/Painting/Painting",
+			"style" : 
+			{
+				"navigationBarTitleText" : "绘画",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom",
+				"unload": false
+			},
+			"page-meta": {
+			        "unload": false
+			      }
+		},
+		{
+			"path" : "pages/ProblemFeedback/ProblemFeedback",
+			"style" : 
+			{
+				// "navigationStyle": "custom",
+				"navigationBarTitleText" : "意见与反馈",
+				"enablePullDownRefresh" : false,
+				"viewportFit": "cover"
+			}
+		},
+		{
+			"path" : "pages/VersionInformation/VersionInformation",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/AddCustomer/AddCustomer",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/EditPersonalInformation/EditPersonalInformation",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/Category/Category",
+			"style" : 
+			{
+				// "softinputMode": "adjustResize",
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false,
+				"navigationStyle": "custom",
+				 // "viewportFit": "cover",
+				// "unload": false,
+				"app-plus": {
+					// "bounce":"none"
+						// "animationType": "zoom-out",
+						// "animationDuration": 3000
+					}
+			}
+		},
+		{
+			"path" : "pages/LoginRegister/LoginRegister",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/LoginImage/LoginImage",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/OnlineSearch/OnlineSearch",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/DatabasePersonal/DatabasePersonal",
+			"style" : 
+			{
+				// "softinputMode": "adjustResize",
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/userAgreement/userAgreement",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/privacyAgreement/privacyAgreement",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/aboutUs/aboutUs",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
+		},
+		{
+			"path" : "pages/IntelligentReport/IntelligentReport",
+			"style" : 
+			{
+				// "softinputMode": "adjustResize",
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/huaweiCloudSales/huaweiCloudSales",
+			"style" : 
+			{
+				// "softinputMode": "adjustResize",
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/knowledgeBase/knowledgeBase",
+			"style" : 
+			{
+				// "softinputMode": "adjustResize",
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/dataRelay/dataRelay",
+			"style" : 
+			{
+				// "softinputMode": "adjustResize",
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path" : "pages/userForm/userForm",
+			"style" : 
+			{
+				"navigationBarTitleText" : "基本信息"
+			}
+		},
+		{
+			"path" : "pages/myQuotation/myQuotation",
+			"style" : 
+			{
+				"navigationBarTitleText" : "我的报价单"
+			}
+		},
+		{
+			"path" : "pages/searchChat/searchChat",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
+		}
+	
+    ],
+	"tabBar": {
+		"selectedColor": "#00BAAD",
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/bottmo_icon/duihuakuang1.png",
+				"selectedIconPath": "static/bottmo_icon/duihuakuang1(ing).png",
+				"text": "报价单"
+			},
+			{
+				"pagePath": "pages/Customer/Customer",
+				"iconPath": "static/bottmo_icon/kehuguanli.png",
+				"selectedIconPath": "static/bottmo_icon/kehuguanli(ing).png",
+				"text": "客户"
+			},
+			{
+				"pagePath": "pages/Intelligent/Intelligent",
+				"iconPath": "static/bottmo_icon/yuan.png",
+				"selectedIconPath": "static/bottmo_icon/yuan(ing).png",
+				"text": "智能体"
+			},
+			{
+				"pagePath": "pages/ReportForms/ReportForms",
+				"iconPath": "static/bottmo_icon/baobiao.png",
+				"selectedIconPath": "static/bottmo_icon/duihuakuang(ing).png",
+				"text": "报表"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"iconPath": "static/bottmo_icon/mine.png",
+				"selectedIconPath": "static/bottmo_icon/mine(ing).png",
+				"text": "我的"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8",
+		"android": {
+		      "webviewBounce": true
+		    }
+	},
+	"uniIdRouter": {},
+	"easycom": {
+		"autoscan": true,  // 组件开关
+		"custom": {
+			"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue"
+		}
+	}
+}
