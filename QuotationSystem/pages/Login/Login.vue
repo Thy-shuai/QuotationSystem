@@ -1,5 +1,6 @@
 <template>
 	<!-- class="all" -->
+	<!-- no longge -->
 	<view class="all">
 		<!-- <view class="Image_icon">
 			<image src="../../static/006.png" mode="widthFix" style="width: 40%;"></image>
