@@ -113,18 +113,12 @@ import { plus } from '../../uni_modules/uview-ui/libs/function/digit.js';
 			console.log("存储的数据是;",JSON.parse(plus.storage.getItem('3aeb4fc9-e525-48e8-b650-0df339d2ff18')));
 		},
 		onShow() {
-			// 最新数据省略
-			// let namee = '{"data":"200","message":"操作成功","status":100,"timestamp":1731482497902}';
-			// const hasStatus = namee.includes('statu');
-			// console.log("是否存在：",hasStatus); // 输出: true
-			
-			
 			this.initData();
 			// _doc/uniapp_save/17285298878730.xlsx
 			this.avatarUrl = uni.getStorageSync('avatarUrl');
 			// console.log("具体的地址是：", this.avatarUrl);
 			if (this.avatarUrl.startsWith('http://') || this.avatarUrl.startsWith('https://')){
-				console.log("是网络地址");
+				// console.log("是网络地址");
 				this.$methods.networkToLocal(this.avatarUrl)
 					.then(isActive => {
 						uni.setStorageSync('avatarUrl', isActive);

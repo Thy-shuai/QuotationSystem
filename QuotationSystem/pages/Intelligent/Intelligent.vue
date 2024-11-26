@@ -52,221 +52,221 @@ export default {
 		// 初始数组"category": 0 配置报价    "category": 1, 是工具  "category": 2,  专属
 		IntelligentData:[
 			{
-			                "id": 1,
-			                "identification": "default",
-			                "hot": 0,
-			                "introduce": "你的智能灵犀百科，回答你的所有问题",
-			                "status": 0,
-			                "category": 1,
-			                "description": "百科全书",
-			                "imageUrl": require('../../static/Intelligent2/2-1.jpg'),
-			                "detailedIntroduction": "嗨，作为你的智能伙伴，我既能写文案、想点子，又能陪你聊天，答疑解惑。提出你的问题，我将为你答疑解惑。",
-							"uuid":'b406a112-7445-43dd-b1e0-f76df215aa81'
-						},
-						{
-						     "id": 2,
-						     "identification": "Custom",
-						     "hot": 0,
-						     "introduce": "上传文件，制作专属于自己的知识库",
-						     "status": 1,
-						     "category": 1,
-						     "description": "知识库",
-						     "imageUrl": require('../../static/Intelligent2/2-2.jpg'),
-						     "detailedIntroduction": "嗨，作为你的智能助手，我专责制作和管理你的专属知识库。只需上传文件，我便能为你分析和整理这些资料。当你查询这些文件中的信息时，我将迅速且准确地为你提供所需的帮助。",
-							 "uuid":'b7597555-2688-4238-b272-d34c34e0f0a9'
-						 },
-						 {
-						     "id": 3,
-						     "identification": "painting",
-						     "hot": 0,
-						     "introduce": "用语言描述所想，我们帮你完成创作",
-						     "status": 1,
-						     "category": 1,
-						     "description": "趣味绘画",
-						     "imageUrl": require('../../static/Intelligent1/2-3.png'),
-						     "detailedIntroduction": "嗨，作为你的智能伙伴，我专门负责智能绘画。只需向我描述你心中的场景，我们就可以帮你将其描绘出来。快来体验看看吧！",
-							 "uuid":'9d6bacd0-a2d7-4544-b4d7-c221f5fcb6ae'
-						 },
-						 {
-						     "id": 5,
-						     "identification": "Character",
-						     "hot": 0,
-						     "introduce": "你喜欢的角色，就是我的身份",
-						     "status": 0,
-						     "category": 1,
-						     "description": "角色扮演",
-						     "imageUrl": require('../../static/Intelligent2/2-5.jpg'),
-						     "detailedIntroduction": "嗨，作为你的智能伙伴，我负责角色扮演，请告诉我你想让我扮演的角色。我将全身心地投入到这个角色中，与你进行对话，为你提供一个真实的互动体验。",
-							 "uuid":'7f6934fd-a120-4ef7-a3b9-df355066a06b'
-						 },
-			            {
-			                "id": 6,
-			                "identification": "ComputerRental",
-			                "hot": 0,
-			                "introduce": "提供常见服务的使用权",
-			                "status": 0,
-			                "category": 1,
-			                "description": "电脑租凭",
-			                "imageUrl": require('../../static/Intelligent2/2-6.jpg'),
-			                "detailedIntroduction": "嗨，作为你的智能伙伴，我们提供市面上常见服务的使用权，适用于临时的项目和特殊活动等等。为用户提供了一种灵活、成本效益高的方式来满足临时或长期的计算需求，避免了购买、维护和升级设备的繁琐和昂贵。快来体验一下吧。",
-							"uuid": '4928d657-d11c-4952-95e6-2f083ce32d56'
-						},
-						{
-						    "id": 7,
-						    "identification": "TecherEnglishHelper",
-						    "hot": 0,
-						    "introduce": "提供常见系统授权账号，用户直接使用",
-						    "status": 0,
-						    "category": 1,
-						    "description": "差旅系统",
-						    "imageUrl": require('../../static/Intelligent2/2-7.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，我们提供市面上常见系统的授权账号。直接使用，免去繁琐的注册流程。快来体验一下吧！",
-							"uuid": '5971a9d4-dc65-4e57-a528-8ec255a24ce6'
-						},
-			            {
-			                "id": 8,
-			                "identification": "inquiry",
-			                "hot": 0,
-			                // "introduce": "灵活报价，根据客户、项目、发展阶段生成个性化报价单",
-							"introduce": "根据客户和项目阶段生成个性化报价单",
-			                "status": 1,
-			                "category": 0,
-			                "description": "产品报价",
-			                "imageUrl": require('../../static/Intelligent2/1-1.jpg'),
-			                "detailedIntroduction": "嗨，作为你的智能伙伴，我负责产品报价。请问给那位客户报价，项目名称是什么？请通过上方添加告诉我。"
-			            },
-						{
-						    "id": 9,
-						    "identification": "equipment",
-						    "hot": 0,
-						    "introduce": "根据产品或需求给出通用、专属参数",
-						    "status": 1,
-						    "category": 0,
-						    "description": "招标参数",
-						    "imageUrl": require('../../static/Intelligent2/1-2.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，设备参数，性能和功能指标我一清二楚。请说出你想要了解的产品型号。",
-							"uuid": '9425eba5-2ecf-4ad3-92d6-e4294ce1bf80'
-						},
-			            {
-			                "id": 10,
-			                "identification": "customerManagement",
-			                "hot": 0,
-			                "introduce": "管理所有客户，新增，修改，查询等",
-			                "status": 1,
-			                "category": 0,
-			                "description": "客户管理",
-			                "imageUrl": require('../../static/Intelligent2/1-3.jpg'),
-			                "detailedIntroduction": "嗨，作为你的智能伙伴，我能高效地管理客户信息，包括新增客户、修改客户资料和查询等功能，让管理变得简单便捷。快来体验一下吧！",
-							"uuid": 'bfc5dd35-4193-42a9-8e0d-a06cca70e924'
-						},
-			            {
-			                "id": 11,
-			                "identification": "DataReport",
-			                "hot": 0,
-			                "introduce": "数据报表精准输出，需要统计的数据都有",
-			                "status": 1,
-			                "category": 0,
-			                "description": "智能报表",
-			                "imageUrl": require('../../static/Intelligent2/1-4.jpg'),
-			                "detailedIntroduction": "嗨，作为你的智能伙伴，我负责管理和整理数据，并通过折线图、柱状图、饼图等形式直观地展示这些信息给你。快来体验看看吧。",
-							"uuid": '11ed0565-d1ae-4e2e-acf1-18f12c1e27f8'
-						},
-						{
-						    "id": 12,
-						    "identification": "Sales",
-						    "hot": 0,
-						    "introduce": "提供最好，最近精准的产品销售策略",
-						    "status": 1,
-						    "category": 0,
-						    "description": "销售策略",
-						    "imageUrl": require('../../static/Intelligent2/1-5.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，我能提供相关产品的详细信息及最优销售策略。快来体验一下吧！",
-							"uuid": '150bdd60-cea3-4c65-a773-22cdfdd62d5c'
-						},
-						{
-						    "id": 13,
-						    "identification": "HuaweiCloud",
-						    "hot": 0,
-						    "introduce": "提供华为云售后服务和技术支撑",
-						    "status": 1,
-						    "category": 0,
-						    "description": "华为云售后",
-						    "imageUrl": require('../../static/Intelligent2/1-6.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，我们提供华为云的售后服务全面的技术支持和客户服务，以确保用户能够有效利用其云计算资源。快来试试吧。",
-							"uuid": '067561ef-4573-4fbc-a499-5688798a29ec'
-						},
-						{
-						    "id": 14,
-						    "identification": "BeautyAvatar",
-						    "hot": 0,
-						    "introduce": "图片多风格转换，快速实现视觉多样化",
-						    "status": 1,
-						    "category": 2,
-						    "description": "美颜头像",
-						    "imageUrl": require('../../static/Intelligent2/3-1.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，只需上传一张图片，我就能帮你转换成多种风格，如职业化、卡通化、抽象化等。快来体验一下吧！",
-							"uuid": '22db27cd-0083-453c-9df5-0d9579b29c28'
-						},
-						{
-						    "id": 15,
-						    "identification": "BusinessCard",
-						    "hot": 0,
-						    "introduce": "一键生成个人名片",
-						    "status": 1,
-						    "category": 2,
-						    "description": "普通名片",
-						    "imageUrl": require('../../static/Intelligent2/3-2.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，只需提供基本信息，我便可一键生成多种风格的个人名片供你选择。快来尝试看看吧！",
-							"uuid": '37c4568d-c335-40b6-8fc8-2fbff81cf32e'
-						},
-						{
-						    "id": 16,
-						    "identification": "DigitalCard",
-						    "hot": 0,
-						    "introduce": "制作会说话的数字人名片",
-						    "status": 1,
-						    "category": 2,
-						    "description": "数字名片",
-						    "imageUrl":  require('../../static/Intelligent2/3-3.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，想要一张会自我介绍的个人名片吗？只需提供一张正面人脸照片和名片所需的个人信息，我就能帮你实现这一需求。快来试试看吧！",
-							"uuid": '220c629b-36ed-4537-bfd8-77aa728ce825'
-						},
-						{
-						    "id": 17,
-						    "identification": "DigitalPeople",
-						    "hot": 0,
-						    "introduce": "你提供照片，我们帮你生成数字人",
-						    "status": 1,
-						    "category": 2,
-						    "description": "数字人",
-						    "imageUrl": require('../../static/Intelligent2/3-4.jpg'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，我能以最低成本帮你创造数字化的自我表现。只需提供一张正面照片和你想表达的话语，就可以轻松实现。快来体验一下吧！",
-							"uuid": '3602f3ea-73a9-40ee-943d-6f03ed9d3fac'
-						},
-						{
-						    "id": 18,
-						    "identification": "AccountPassword",
-						    "hot": 0,
-						    "introduce": "防止账号密码过多而遗忘和混淆",
-						    "status": 1,
-						    "category": 2,
-						    "description": "密码管家",
-						    "imageUrl":  require('../../static/Intelligent1/3-5.png'),
-						    "detailedIntroduction": "嗨，作为你的智能伙伴，我在确保隐私和安全的前提下，帮助客户安全存储账号和密码。这样做可以防止客户因密码众多而遗忘或混淆。需要时，我们会安全地返还给客户。",
-							"uuid": 'b37e668b-66af-47bd-91ce-7d945b68670f'
-						},
-						{
-						    "id": 19,
-						    "identification": "StoreFiles",
-						    "hot": 0,
-						    "introduce": "请上传定价文件，便于我们报价",
-						    "status": 1,
-						    "category": 2,
-						    "description": "产品定价",
-						    "imageUrl": require('../../static/Intelligent2/3-6.jpg'),
-						    "detailedIntroduction": "嗨，作为您的智能伙伴，我能在确保隐私和安全的前提下，帮助用户进行产品定价。当您上传定价文件后，我们的系统将参考这些文件，为您提供精准的产品报价。",
-							"uuid": 'afb25ca5-fc1e-4ea3-88de-bfec8b10172b'
-						},
+					"id": 1,
+					"identification": "default",
+					"hot": 0,
+					"introduce": "你的智能灵犀百科，回答你的所有问题",
+					"status": 0,
+					"category": 1,
+					"description": "百科全书",
+					"imageUrl": require('../../static/Intelligent2/2-1.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我既能写文案、想点子，又能陪你聊天，答疑解惑。提出你的问题，我将为你答疑解惑。",
+					"uuid":'b406a112-7445-43dd-b1e0-f76df215aa81'
+				},
+				{
+					 "id": 2,
+					 "identification": "Custom",
+					 "hot": 0,
+					 "introduce": "上传文件，制作专属于自己的知识库",
+					 "status": 1,
+					 "category": 1,
+					 "description": "知识库",
+					 "imageUrl": require('../../static/Intelligent2/2-2.jpg'),
+					 "detailedIntroduction": "嗨，作为你的智能助手，我专责制作和管理你的专属知识库。只需上传文件，我便能为你分析和整理这些资料。当你查询这些文件中的信息时，我将迅速且准确地为你提供所需的帮助。",
+					 "uuid":'b7597555-2688-4238-b272-d34c34e0f0a9'
+				 },
+				 {
+					 "id": 3,
+					 "identification": "painting",
+					 "hot": 0,
+					 "introduce": "用语言描述所想，我们帮你完成创作",
+					 "status": 1,
+					 "category": 1,
+					 "description": "趣味绘画",
+					 "imageUrl": require('../../static/Intelligent1/2-3.png'),
+					 "detailedIntroduction": "嗨，作为你的智能伙伴，我专门负责智能绘画。只需向我描述你心中的场景，我们就可以帮你将其描绘出来。快来体验看看吧！",
+					 "uuid":'9d6bacd0-a2d7-4544-b4d7-c221f5fcb6ae'
+				 },
+				 {
+					 "id": 5,
+					 "identification": "Character",
+					 "hot": 0,
+					 "introduce": "你喜欢的角色，就是我的身份",
+					 "status": 0,
+					 "category": 1,
+					 "description": "角色扮演",
+					 "imageUrl": require('../../static/Intelligent2/2-5.jpg'),
+					 "detailedIntroduction": "嗨，作为你的智能伙伴，我负责角色扮演，请告诉我你想让我扮演的角色。我将全身心地投入到这个角色中，与你进行对话，为你提供一个真实的互动体验。",
+					 "uuid":'7f6934fd-a120-4ef7-a3b9-df355066a06b'
+				 },
+				{
+					"id": 6,
+					"identification": "ComputerRental",
+					"hot": 0,
+					"introduce": "提供常见服务的使用权",
+					"status": 0,
+					"category": 1,
+					"description": "电脑租凭",
+					"imageUrl": require('../../static/Intelligent2/2-6.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我们提供市面上常见服务的使用权，适用于临时的项目和特殊活动等等。为用户提供了一种灵活、成本效益高的方式来满足临时或长期的计算需求，避免了购买、维护和升级设备的繁琐和昂贵。快来体验一下吧。",
+					"uuid": '4928d657-d11c-4952-95e6-2f083ce32d56'
+				},
+				{
+					"id": 7,
+					"identification": "TecherEnglishHelper",
+					"hot": 0,
+					"introduce": "提供常见系统授权账号，用户直接使用",
+					"status": 0,
+					"category": 1,
+					"description": "差旅系统",
+					"imageUrl": require('../../static/Intelligent2/2-7.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我们提供市面上常见系统的授权账号。直接使用，免去繁琐的注册流程。快来体验一下吧！",
+					"uuid": '5971a9d4-dc65-4e57-a528-8ec255a24ce6'
+				},
+				{
+					"id": 8,
+					"identification": "inquiry",
+					"hot": 0,
+					// "introduce": "灵活报价，根据客户、项目、发展阶段生成个性化报价单",
+					"introduce": "根据客户和项目阶段生成个性化报价单",
+					"status": 1,
+					"category": 0,
+					"description": "产品报价",
+					"imageUrl": require('../../static/Intelligent2/1-1.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我负责产品报价。请问给那位客户报价，项目名称是什么？请通过上方添加告诉我。"
+				},
+				{
+					"id": 9,
+					"identification": "equipment",
+					"hot": 0,
+					"introduce": "根据产品或需求给出通用、专属参数",
+					"status": 1,
+					"category": 0,
+					"description": "招标参数",
+					"imageUrl": require('../../static/Intelligent2/1-2.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，设备参数，性能和功能指标我一清二楚。请说出你想要了解的产品型号。",
+					"uuid": '9425eba5-2ecf-4ad3-92d6-e4294ce1bf80'
+				},
+				{
+					"id": 10,
+					"identification": "customerManagement",
+					"hot": 0,
+					"introduce": "管理所有客户，新增，修改，查询等",
+					"status": 1,
+					"category": 0,
+					"description": "客户管理",
+					"imageUrl": require('../../static/Intelligent2/1-3.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我能高效地管理客户信息，包括新增客户、修改客户资料和查询等功能，让管理变得简单便捷。快来体验一下吧！",
+					"uuid": 'bfc5dd35-4193-42a9-8e0d-a06cca70e924'
+				},
+				{
+					"id": 11,
+					"identification": "DataReport",
+					"hot": 0,
+					"introduce": "数据报表精准输出，需要统计的数据都有",
+					"status": 1,
+					"category": 0,
+					"description": "智能报表",
+					"imageUrl": require('../../static/Intelligent2/1-4.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我负责管理和整理数据，并通过折线图、柱状图、饼图等形式直观地展示这些信息给你。快来体验看看吧。",
+					"uuid": '11ed0565-d1ae-4e2e-acf1-18f12c1e27f8'
+				},
+				{
+					"id": 12,
+					"identification": "Sales",
+					"hot": 0,
+					"introduce": "提供最好，最近精准的产品销售策略",
+					"status": 1,
+					"category": 0,
+					"description": "销售策略",
+					"imageUrl": require('../../static/Intelligent2/1-5.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我能提供相关产品的详细信息及最优销售策略。快来体验一下吧！",
+					"uuid": '150bdd60-cea3-4c65-a773-22cdfdd62d5c'
+				},
+				{
+					"id": 13,
+					"identification": "HuaweiCloud",
+					"hot": 0,
+					"introduce": "提供华为云售后服务和技术支撑",
+					"status": 1,
+					"category": 0,
+					"description": "华为云售后",
+					"imageUrl": require('../../static/Intelligent2/1-6.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我们提供华为云的售后服务全面的技术支持和客户服务，以确保用户能够有效利用其云计算资源。快来试试吧。",
+					"uuid": '067561ef-4573-4fbc-a499-5688798a29ec'
+				},
+				{
+					"id": 14,
+					"identification": "BeautyAvatar",
+					"hot": 0,
+					"introduce": "图片多风格转换，快速实现视觉多样化",
+					"status": 1,
+					"category": 2,
+					"description": "美颜头像",
+					"imageUrl": require('../../static/Intelligent2/3-1.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，只需上传一张图片，我就能帮你转换成多种风格，如职业化、卡通化、抽象化等。快来体验一下吧！",
+					"uuid": '22db27cd-0083-453c-9df5-0d9579b29c28'
+				},
+				{
+					"id": 15,
+					"identification": "BusinessCard",
+					"hot": 0,
+					"introduce": "一键生成个人名片",
+					"status": 1,
+					"category": 2,
+					"description": "普通名片",
+					"imageUrl": require('../../static/Intelligent2/3-2.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，只需提供基本信息，我便可一键生成多种风格的个人名片供你选择。快来尝试看看吧！",
+					"uuid": '37c4568d-c335-40b6-8fc8-2fbff81cf32e'
+				},
+				{
+					"id": 16,
+					"identification": "DigitalCard",
+					"hot": 0,
+					"introduce": "制作会说话的数字人名片",
+					"status": 1,
+					"category": 2,
+					"description": "数字名片",
+					"imageUrl":  require('../../static/Intelligent2/3-3.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，想要一张会自我介绍的个人名片吗？只需提供一张正面人脸照片和名片所需的个人信息，我就能帮你实现这一需求。快来试试看吧！",
+					"uuid": '220c629b-36ed-4537-bfd8-77aa728ce825'
+				},
+				{
+					"id": 17,
+					"identification": "DigitalPeople",
+					"hot": 0,
+					"introduce": "你提供照片，我们帮你生成数字人",
+					"status": 1,
+					"category": 2,
+					"description": "数字人",
+					"imageUrl": require('../../static/Intelligent2/3-4.jpg'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我能以最低成本帮你创造数字化的自我表现。只需提供一张正面照片和你想表达的话语，就可以轻松实现。快来体验一下吧！",
+					"uuid": '3602f3ea-73a9-40ee-943d-6f03ed9d3fac'
+				},
+				{
+					"id": 18,
+					"identification": "AccountPassword",
+					"hot": 0,
+					"introduce": "防止账号密码过多而遗忘和混淆",
+					"status": 1,
+					"category": 2,
+					"description": "密码管家",
+					"imageUrl":  require('../../static/Intelligent1/3-5.png'),
+					"detailedIntroduction": "嗨，作为你的智能伙伴，我在确保隐私和安全的前提下，帮助客户安全存储账号和密码。这样做可以防止客户因密码众多而遗忘或混淆。需要时，我们会安全地返还给客户。",
+					"uuid": 'b37e668b-66af-47bd-91ce-7d945b68670f'
+				},
+				{
+					"id": 19,
+					"identification": "StoreFiles",
+					"hot": 0,
+					"introduce": "请上传定价文件，便于我们报价",
+					"status": 1,
+					"category": 2,
+					"description": "产品定价",
+					"imageUrl": require('../../static/Intelligent2/3-6.jpg'),
+					"detailedIntroduction": "嗨，作为您的智能伙伴，我能在确保隐私和安全的前提下，帮助用户进行产品定价。当您上传定价文件后，我们的系统将参考这些文件，为您提供精准的产品报价。",
+					"uuid": 'afb25ca5-fc1e-4ea3-88de-bfec8b10172b'
+				},
 						
 		],
 		Rendering:[],
@@ -303,7 +303,7 @@ export default {
 				uni.setStorageSync('companyName', '灵犀报价科技有限公司');
 			}
 			name = uni.getStorageSync('companyName');
-			console.log("提交的姓名是：", name);
+			// console.log("提交的姓名是：", name);
 			uni.request({
 				url:`${this.$store.state.BASE_URL}/api/Compress?FullName=${name}`,
 					method:'GET',
@@ -315,7 +315,7 @@ export default {
 						if (res.data.status == 100){
 							uni.setStorageSync('abbreviation', JSON.parse(res.data.data).value);
 							this.nameCompany = JSON.parse(res.data.data).value;
-							console.log("此时获取的名称是", this.nameCompany);
+							// console.log("此时获取的名称是", this.nameCompany);
 						} else {
 							// 此时分为两种情况
 							this.nameCompany = name;
