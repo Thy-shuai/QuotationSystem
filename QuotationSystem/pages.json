@@ -342,6 +342,13 @@
 				"navigationBarTitleText" : "",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/beautyCamera/beautyCamera",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 	
     ],

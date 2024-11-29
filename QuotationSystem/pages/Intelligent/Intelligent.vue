@@ -411,6 +411,14 @@ export default {
 		// 	uni.$u.toast('功能尚未开通');
 		// 	return ;
 		// }
+		if (e.identification == 'BeautyAvatar'){
+			const param = encodeURIComponent(JSON.stringify(e));
+			uni.navigateTo({
+				url:`/pages/beautyCamera/beautyCamera?param=${param}`
+			})
+			this.hotNumber(e.identification);
+			return ;
+		}
 		if (e.identification == 'Custom'){
 			// this.setDialogbox(e, myUUID);
 			const param = encodeURIComponent(JSON.stringify(e));
