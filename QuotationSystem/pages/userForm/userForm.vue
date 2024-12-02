@@ -158,6 +158,7 @@
 		},
 		methods: {
 			async submit(){
+				console.log("id是：",uni.getStorageSync('imageId'));
 				try{
 					console.log("id是：",this.imageId);
 					uni.showLoading({
@@ -213,31 +214,6 @@
 						uni.$u.toast(`${e.message}`);
 					}
 				}
-				// uni.request({
-				// 	url:`${this.$store.state.BASE_URL}/info/UpdataInfo`,
-				// 	method:'post',
-				// 	header:{
-				// 	  satoken:uni.getStorageSync('token')
-				// 	},
-				// 	data:{
-				// 		username:this.nickname,
-				// 		Id:this.imageId,
-				// 		sex:this.sex,
-				// 		level:uni.getStorageSync('job'),
-				// 		rank:uni.getStorageSync('level'),
-				// 	},
-				// 	success: (res) => {
-				// 		uni.hideLoading();
-				// 		console.log("上传成功：",res);
-				// 		if (res.data.status == 100){
-				// 			uni.$u.toast('修改成功');
-				// 		}
-				// 	},
-				// 	fail: (res) => {
-				// 		uni.hideLoading();
-				// 		console.log("上传失败",res);
-				// 	}
-				// })
 			},
 			nickNameHandle(){
 				let index = this.nickname;

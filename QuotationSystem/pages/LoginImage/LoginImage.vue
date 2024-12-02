@@ -265,7 +265,9 @@
 							let token = res.data.data.satoken;
 							console.log("token的值是：",token);
 							uni.setStorageSync('token',token)
-							self.getUserInformation();
+							self.getUserInformation(); // 获取头像信息
+							// this.initializedData();
+							this.initializedData();
 							uni.switchTab({
 								url: '/pages/Intelligent/Intelligent'
 							});
@@ -366,6 +368,80 @@
 				// 		uni.$u.toast('网络开小差了~');
 				// 	}
 				// })
+			},
+			async initializedData(){
+				try{
+					// 加载会话数据
+					let res1 = await uni.request({
+						url:`${this.$store.state.BASE_URL}/ver/LoadSession`,
+						// url:
+						method:'GET',
+						header:{
+							satoken:uni.getStorageSync('token')
+						}
+					})
+					console.log("res1的值是：",res1);
+					if (res1.data.status != 100){
+						console.log("456");
+						// 抛出异常的错误
+						throw new Error(`${res1.data.message}`);
+					}
+					if (res1.data.data.length > 0){
+						// uni.getStorageSync('ChatSession');
+						// 对话控件进行赋值
+						console.log("从后端获取的会话组件的值是：",res1.data.data);
+						// res1.data.data.forEach(item => {
+						// 	item.date = this.$methods.timestampToDate(item.date);
+						// 	console.log("时间是:",item.date);
+						// })
+						// console.log("修改完之后会话组件的值是：", res1.data.data);
+						uni.setStorageSync('ChatSession', res1.data.data);
+						res1.data.data.forEach(item => {
+							this.$methods.getRecords(this.$store.state.BASE_URL, item.uuid, 0)
+								.then(isActive => {
+									console.log("报价记录获取成功:",isActive);
+									return this.$methods.getCustomer(this.$store.state.BASE_URL)
+								})
+								.then(isCustomer => {
+									console.log("客户信息获取成功");
+								})
+								.catch(Error => {
+									console.log("记录获取失败:", Error);
+									// return false;
+								})
+						})
+					}
+					// console.log("此时会话的消息记录是：",res1.data.data);
+					// res1.data.data.forEach(item => {
+					// 	this.$methods.getRecords(this.$store.state.BASE_URL, item.uuid, 0)
+					// 		.then(isActive => {
+					// 			console.log("报价记录获取成功:",isActive);
+					// 			return this.$methods.getCustomer(this.$store.state.BASE_URL)
+					// 		})
+					// 		.then(isCustomer => {
+					// 			console.log("客户信息获取成功");
+					// 		})
+					// 		.catch(Error => {
+					// 			console.log("记录获取失败:", Error);
+					// 			// return false;
+					// 		})
+					// })
+					return true;  // 正常逻辑下返回
+					
+				}catch(err){
+					console.log("错误信息是：",err);
+					//TODO handle the exception
+					return false;  // 异常逻辑下返回
+					// uni.hideLoading();
+					// this.phoneLogin();
+					// if (err.message === undefined){
+					// 	// 断网状态
+					// 	uni.$u.toast('网络开小差了~');
+					// } else {
+					// 	// 处理抛出的错误
+					// 	uni.$u.toast(`${err.message}`);
+					// }
+				}
 			},
 			replace_image(){
 				uni.showLoading({
