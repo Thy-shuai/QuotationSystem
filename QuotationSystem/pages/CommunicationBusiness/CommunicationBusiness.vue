@@ -1797,24 +1797,21 @@
 			// 拍照片
 			// 文件上传
 			async sendFile(result){
-				// console.log("此时的网络状况：",this.isConnected);
-				// console.log("此文件的uuid是", this.uuid);
 				// this.ImageGeneration = false;
 				if (this.isConnected != true){
-					this.ImageGeneration = false;
+					// this.ImageGeneration = false;
 					this.$methods.promptBox('网络链接有问题')
 					return ;
 				}
-				// console.log("需要上传的文件是：",result);
-				uni.showLoading({
-					title: '正在上传中，请稍后',
-				})
 				let leixing = result.files[0].fileExtension;
 				if (leixing != 'xlsx' && leixing != 'word' && leixing != 'pdf' && leixing != 'docx' && leixing != 'txt'){
 					this.$methods.promptBox(`不支持${leixing}格式的文件`);
-					this.ImageGeneration = false;
 					return ;
 				}
+				uni.showLoading({
+					title: '正在上传中，请稍后',
+				})
+				this.ImageGeneration = true;
 				this.filename = result.files[0].fileName;
 				// WebSocket 是否已经建立连接
 				console.log("链接是否是断开的",this.isConnected);

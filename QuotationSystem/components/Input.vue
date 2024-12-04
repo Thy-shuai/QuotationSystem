@@ -102,7 +102,7 @@ import index from '../uni_modules/uview-ui';
 				this.file_explain = newVal;
 			},
 			getAnswer(newVal) {
-				// console.log("数据是：",newVal);
+				console.log("数据是456：",newVal);
 				this.ImageGeneration = newVal;
 			},
 		},
@@ -112,7 +112,7 @@ import index from '../uni_modules/uview-ui';
 			
 		},
 		mounted() {
-			// console.log("最初的数据是：",this.ImageGeneration);
+			console.log("最初的数据是456：",this.ImageGeneration);
 			this.$eventBus.$on('hello', (data)=>{
 				console.log("收到了发送过来的消息：",data);
 				this.input_msg = data.message;
@@ -229,8 +229,9 @@ import index from '../uni_modules/uview-ui';
 						else {
 							console.log("文件是789：",result);
 							if (result.detail != '选取文件成功')return;
+			
 							this.file_explain = 1;
-							self.ImageGeneration = true;
+							// self.ImageGeneration = true;
 							// console.log("文件类型是：",result.files[0].fileExtension);
 							this.$emit('childMessage', 1);
 							this.$emit('fileMesage', result);

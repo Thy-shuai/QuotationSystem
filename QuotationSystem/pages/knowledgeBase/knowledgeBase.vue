@@ -904,6 +904,7 @@
 							// this.isConnected = false;
 							// this.uploadFiles(result);
 							// 拿到文件上传的名称
+							
 							result.files.forEach(File => {
 								this.uploadFiles(File)
 									.then(isActive => {
@@ -931,6 +932,7 @@
 						uni.$u.toast(`不支持${event.fileExtension}格式文件`);
 						return;
 					}
+					this.ImageGeneration = true;
 					if (event.fileSize > 0 && event.fileSize<1024){
 						event.fileSize = `${event.fileSize}B`;
 					}
