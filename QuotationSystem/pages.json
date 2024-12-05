@@ -349,6 +349,13 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/beautyCameraDisplay/beautyCameraDisplay",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 	
     ],

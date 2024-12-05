@@ -2472,6 +2472,7 @@
 								  // destWidth: 600 , // 生成图片的宽度，通常乘以2保证清晰度
 								  // destHeight: this.canvasHeight , // 生成图片的高度，通常乘以2保证清晰度
 								  success: (res) => {
+									  console.log("临时文件路径：", res.tempFilePath);
 									  uni.saveFile({
 									  	tempFilePath:res.tempFilePath,
 										success: (res) => {
