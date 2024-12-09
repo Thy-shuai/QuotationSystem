@@ -356,6 +356,14 @@
 			{
 				"navigationBarTitleText" : ""
 			}
+		},
+		{
+			"path" : "pages/businessCard/businessCard",
+			"style" : 
+			{
+				"navigationBarTitleText" : "制作我的个人名片",
+				"backgroundColor": "#0498ff"
+			}
 		}
 	
     ],

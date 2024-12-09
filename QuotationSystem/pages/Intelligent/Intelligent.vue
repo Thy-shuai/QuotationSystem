@@ -412,6 +412,14 @@
 				// 	uni.$u.toast('功能尚未开通');
 				// 	return ;
 				// }
+				if (e.identification == 'BusinessCard') {
+					const param = encodeURIComponent(JSON.stringify(e));
+					uni.navigateTo({
+						url: `/pages/businessCard/businessCard?param=${param}`
+					})
+					this.hotNumber(e.identification);
+					return;
+				}
 				if (e.identification == 'BeautyAvatar') {
 					const param = encodeURIComponent(JSON.stringify(e));
 					uni.navigateTo({
