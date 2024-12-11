@@ -14,14 +14,14 @@
 	  data() {
 		return {
 		  imgUrl: 'http://114.115.203.18:7788/avatar/card.png', // 替换为你的图片地址
-		  imageSrc:''
+		  imageSrc:'_doc/uniapp_save/17339124895740.png'
 		};
 	  },
 	  components:{
 		  businessCardVue
 	  },
 	  mounted() {
-		this.loadImageToCanvas(this.imgUrl);
+		// this.loadImageToCanvas(this.imgUrl);
 		// 在uniapp中获取屏幕宽度
 	  },
 	  methods: {

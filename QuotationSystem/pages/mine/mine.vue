@@ -107,7 +107,9 @@
 		onLoad() {
 			console.log("存储的数据是;", JSON.parse(plus.storage.getItem('3aeb4fc9-e525-48e8-b650-0df339d2ff18')));
 		},
-		onShow() {},
+		onShow() {
+			this.mineInit();
+		},
 		onPullDownRefresh() {
 			console.log("开始下拉刷新");
 			this.getUserInformation()
@@ -305,9 +307,20 @@
 				this.numberOfCustomers = name.length || 0;
 				this.numberOfQuotations = event.length || 0;
 				// 如果 event 有数据，计算 totalSalesPrice
+				
+				//  有数据
 				if (event.length > 0) {
 					let price = event.reduce((total, item) => total + item.price, 0);
+					console.log("此时的消息是：", price);
+					// 没价格
+					if (price.length == 0){
+						this.totalSalesPrice = 0;
+						return ;
+					}
 					this.totalSalesPrice = price.toFixed(2);
+				} else {
+					console.log("此时的没有价格");
+					this.totalSalesPrice = 0;
 				}
 			}
 		}
