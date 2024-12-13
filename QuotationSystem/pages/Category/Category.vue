@@ -395,7 +395,7 @@
 							
 							this.donghua = false;
 							console.log("结果值时：",res);
-							this.biaoji  = 1;
+							this.biaoji = 1;
 							this.index = '';
 							this.indexSize = '';
 							this.typingTimer = null;

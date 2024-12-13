@@ -21,7 +21,8 @@
         /* 模块配置 */
         "modules" : {
             "SQLite" : {},
-            "OAuth" : {}
+            "OAuth" : {},
+            "Camera" : {}
         },
         // 安卓设备的IMEI值
         "plus" : {

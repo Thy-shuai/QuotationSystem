@@ -347,14 +347,14 @@
 			"path" : "pages/beautyCamera/beautyCamera",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "规格详情"
 			}
 		},
 		{
 			"path" : "pages/beautyCameraDisplay/beautyCameraDisplay",
 			"style" : 
 			{
-				"navigationBarTitleText" : ""
+				"navigationBarTitleText" : "预览"
 			}
 		},
 		{
@@ -363,6 +363,13 @@
 			{
 				"navigationBarTitleText" : "制作我的个人名片",
 				"backgroundColor": "#0498ff"
+			}
+		},
+		{
+			"path" : "pages/beautySize/beautySize",
+			"style" : 
+			{
+				"navigationBarTitleText" : "规格列表"
 			}
 		}
 	

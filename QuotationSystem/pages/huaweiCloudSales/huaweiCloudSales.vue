@@ -25,7 +25,7 @@
 			
 		</view>
 		<!-- class="Background_bottom" -->
-			<view :class="file_explain == 1 ? 'Background_bottom_1' : (file_explain == 0 ? 'Background_bottom' : 'Background_bottom_3')" :style="dynamicStyle" @tap="redisplay">
+			<view :class="file_explain == 1 ? 'Background_bottom_1' : (file_explain == 0 ? 'Background_bottom' : 'Background_bottom_2')" :style="dynamicStyle" @tap="redisplay">
 				<!-- :scroll-with-animation="true" style="height: 96%;width: 100%;"-->
 				<scroll-view  :scroll-top="scrollTopHeight" :scroll-with-animation="donghua" style="scroll-behavior: smooth;width: 100%;margin: 0 15rpx;" scroll-y="true" class="mmm">
 					<view id="your-view-id">
@@ -71,8 +71,9 @@
 				
 								</view>
 							</view>
-							<view class="myBox" v-if="item.role=='user'" >
-								<view @longtap.stop="explay($event ,item)" style="position: relative;">
+							<view class="myBox" v-if="item.role=='user'">
+								<!-- style="position: relative;" -->
+								<view @longtap.stop="explay($event ,item)">
 									<view v-if="item.dataHandle==1" style="position: absolute;top:-120rpx;right: 10rpx ;z-index: 99;">
 										<CheckboxTextVue
 											direction="0" 
@@ -82,7 +83,6 @@
 											@deletemsg="deletemsg"
 										/>
 									</view>
-									<!-- padding-left: 25rpx;padding-right: 25rpx; -->
 									<view class="myMsg" style="padding: 15rpx 20rpx;font-size: 30rpx;">
 										{{item.content}}
 									</view>
@@ -267,6 +267,7 @@
 		},
 		onUnload() {
 			this.socketTask.close();
+			// this.msgBox = [];
 			plus.storage.setItem(`${this.uuid}`,JSON.stringify(this.msgBox));
 			// let chatSession = uni.getStorageSync('ChatSession');
 			// const foundItem = chatSession.find(item => item.uuid === this.uuid);
@@ -356,7 +357,7 @@
 				
 				this.input_msg = '';
 				let myMessage = '';
-				const md = new MarkdownIt();
+				// const md = new MarkdownIt();
 				// this.donghua = false;
 				if (this.isConnected == true){
 					uni.request({
@@ -377,19 +378,13 @@
 							
 							this.donghua = false;
 							console.log("结果值时：",res);
-							// this.biaoji = 1;
-							// this.index = '';
-							// this.indexSize = '';
-							// this.typingTimer = null;
-							// this.displayedText = '';
-							// this.is_doc = false;
-							// this.obbj = obbj;
 							let biaoji = 1;
 							let index = '';
 							let indexSize = '';
 							let typingTimer = null;  // 定时器
 							let displayedText = '';  // 文本中转
 							let is_doc = false;   // 获取的值是否是doc
+							
 							this.socketTask.onMessage((message)=>{
 								console.log("得到的数据是：",message.data);
 								if (this.stop_message == 1)return;
@@ -424,31 +419,12 @@
 								obbj.history += temporaryMessage;
 								index += temporaryMessage;
 								indexSize = index;
-								// obbj.history += index;
-								// obbj.history += index;
 								if (index.length > 2 && !typingTimer){
 									typingTimer = setInterval(()=>{
 										if (index.length > 0){
 											displayedText += index.charAt(0);
 											this.introde_bottom = displayedText;
-											// const regex = /<pre><code class="(\w+)">([\s\S]*?)<\/code><\/pre>/gi;
-											// let match;
 											let highlighted = marked(displayedText);
-								
-											// while ((match = regex.exec(this.content)) !== null) {
-											// 	const language = match[1];
-											// 	const code = match[2];
-											// 	// 确保语言有效，否则默认为 'plaintext'
-											// 	const validLanguage = hljs.getLanguage(language) ? language : 'plaintext';
-											// 	// 应用高亮
-											// 	const highlightedCode = hljs.highlight(code, { language: validLanguage }).value;
-											// 	// 生成新的高亮后的 HTML 字符串
-											// 	const highlightedSnippet = `<pre><code class="${language}">${highlightedCode}</code></pre>`;
-											// 	// 替换原有的未高亮代码块
-											// 	highlighted = highlighted.replace(match[0], highlightedSnippet);
-											// }
-											// console.log("index的值是：",index);
-											// console.log("终止的值是：",`/end${this.uuid}`);
 											if (index == `/end${this.uuid}`){
 												let newData = {
 													role: "user",
@@ -467,23 +443,26 @@
 												return;
 											}
 											if (this.stop_message == 0){
+												// this.$nextTick(()=>{
+												// obbj.content = '1';
 												obbj.content = highlighted;
+												// console.log("数据是：", obbj.content);
+												// })
 											} else {
 												this.ImageGeneration = false;
 												clearInterval(typingTimer);
 												typingTimer = null;
 												return;
 											}
-											// if (this.stop_message != 1)obbj.content = highlighted;
-											// || index == end
 											index = index.substring(1);
 										} else {
 											clearInterval(typingTimer);
 											typingTimer = null;
 										}
 									}, 50)
+								} else {
+									// obbj.content = marked(index);
 								}
-								obbj.content = marked(index);
 							});
 							// console.log("结束：")
 						},
@@ -761,18 +740,18 @@
 	@letter-space: 0.6px;  // 正文间距
 	
 	
-	pre, code {
-		font-size: 22rpx;
-	    white-space: pre-wrap;       /* CSS 3 */
-	    white-space: -moz-pre-wrap;  /* Firefox */
-	    white-space: -pre-wrap;      /* Opera <7 */
-	    white-space: -o-pre-wrap;    /* Opera 7 */
-	    word-wrap: break-word;       /* IE */
-	}
+	// pre, code {
+	// 	font-size: 22rpx;
+	//     white-space: pre-wrap;       
+	//     white-space: -moz-pre-wrap;  
+	//     white-space: -pre-wrap;      
+	//     white-space: -o-pre-wrap;    
+	//     word-wrap: break-word;       
+	// }
 	
-	p{
-		margin-bottom: 20rpx;
-	}
+	// p{
+	// 	margin-bottom: 20rpx;
+	// }
 	.mmm{
 		height: 98%;
 		width: 100%;
@@ -816,6 +795,7 @@
 	}
 	.myBox{
       display: flex;
+	  // width: 100%;
       justify-content: flex-end;
       align-items: flex-start;
 	  /* margin-right: 40rpx; */

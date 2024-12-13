@@ -423,8 +423,11 @@
 				if (e.identification == 'BeautyAvatar') {
 					const param = encodeURIComponent(JSON.stringify(e));
 					uni.navigateTo({
-						url: `/pages/beautyCamera/beautyCamera?param=${param}`
+						url: `/pages/beautySize/beautySize?param=${param}`
 					})
+					// uni.navigateTo({
+					// 	url: `/pages/beautyCamera/beautyCamera?param=${param}`
+					// })
 					this.hotNumber(e.identification);
 					return;
 				}
