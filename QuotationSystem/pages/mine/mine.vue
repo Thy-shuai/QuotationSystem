@@ -105,7 +105,6 @@
 			}
 		},
 		onLoad() {
-			console.log("存储的数据是;", JSON.parse(plus.storage.getItem('3aeb4fc9-e525-48e8-b650-0df339d2ff18')));
 		},
 		onShow() {
 			this.mineInit();
@@ -145,26 +144,23 @@
 				// 计算时间差（以天为单位）
 				const timeDifference = nowDate - targetDate;
 
-				// 如果是今天，显示小时和分钟
 				if (nowYear === targetYear && nowMonth === targetMonth && nowDate === targetDate) {
 					const hours = targetTime.getHours().toString().padStart(2, '0');
 					const minutes = targetTime.getMinutes().toString().padStart(2, '0');
 					return `${hours}:${minutes}`;
 				}
 
-				// 如果是昨天，显示“昨天”
 				if (nowYear === targetYear && nowMonth === targetMonth && timeDifference === 1) {
 					return "昨天";
 				}
 
-				// 如果是更早的日期，显示具体的月和日
 				return `${targetMonth}月${targetDate}日`;
 			},
 			truncateNickName(nickName) {
 				if (nickName.length <= 13) {
-					return nickName; // 如果字符串长度小于或等于8，直接返回原字符串
+					return nickName; 
 				}
-				return nickName.slice(0, 13) + "..."; // 取前8个字符，剩下的字符用三个点代替
+				return nickName.slice(0, 13) + "...";
 			},
 			jump(event) {
 				if (event == '我的报价单') {
@@ -186,16 +182,11 @@
 					return;
 				}
 				if (event == '退出登录') {
-					// let event = uni.getStorageSync('ChatSession');
-					// event.forEach(item => {
-					// 	plus.storage.removeItem(`${item.uuid}`);
-					// })
 					uni.showModal({
 						title: '提示',
 						content: `${event}`,
 						success: (res) => {
 							if (res.confirm) {
-								console.log('用户点击确定');
 								uni.showLoading({
 									title: '登录中~',
 								})
@@ -211,9 +202,6 @@
 											uni.$u.toast('退出登录成功！');
 											uni.removeStorageSync('token');
 											let event = uni.getStorageSync('ChatSession');
-											// event.forEach(item => {
-											// 	plus.storage.removeItem(`${item.uuid}`);
-											// })
 											uni.removeStorageSync('ChatSession');
 											uni.removeStorageSync('itemArr');
 											uni.removeStorageSync('objj');
@@ -250,15 +238,12 @@
 					if (res.data.status != 100) {
 						throw new Error(res.data.message);
 					}
-					console.log("获取的头像是:", res);
 					uni.setStorageSync('imageId', res.data.data.id);
 					uni.setStorageSync('nickName', res.data.data.username);
 					// uni.setStorageSync('nickName', '18352868816');
 					uni.setStorageSync('avatarUrl', res.data.data.avatar);
 					uni.setStorageSync('sex', res.data.data.sex);
-					// 职位
 					uni.setStorageSync('job', res.data.data.level);
-					// 销售等级
 					uni.setStorageSync('level', res.data.data.rank);
 
 					this.mineInit();
@@ -269,11 +254,8 @@
 			},
 			mineInit() {
 				this.initData();
-				// _doc/uniapp_save/17285298878730.xlsx
 				this.avatarUrl = uni.getStorageSync('avatarUrl');
-				// console.log("具体的地址是：", this.avatarUrl);
 				if (this.avatarUrl.startsWith('http://') || this.avatarUrl.startsWith('https://')) {
-					// console.log("是网络地址");
 					this.$methods.networkToLocal(this.avatarUrl)
 						.then(isActive => {
 							uni.setStorageSync('avatarUrl', isActive);
@@ -294,32 +276,21 @@
 			},
 			blurData() {
 				this.value = this.value.trim();
-				console.log("去除空格之后：", this.value);
 				let index = this.$methods.createNickName(this.value, 10);
-				console.log("返回的字符串是：", index);
-				// uni.setStorageSync('companyName', this.value);
 			},
 			initData() {
 				let event = uni.getStorageSync('ChatSession');
 				let name = uni.getStorageSync('itemArr');
-
-				// 初始化属性
 				this.numberOfCustomers = name.length || 0;
 				this.numberOfQuotations = event.length || 0;
-				// 如果 event 有数据，计算 totalSalesPrice
-				
-				//  有数据
 				if (event.length > 0) {
 					let price = event.reduce((total, item) => total + item.price, 0);
-					console.log("此时的消息是：", price);
-					// 没价格
 					if (price.length == 0){
 						this.totalSalesPrice = 0;
 						return ;
 					}
 					this.totalSalesPrice = price.toFixed(2);
 				} else {
-					console.log("此时的没有价格");
 					this.totalSalesPrice = 0;
 				}
 			}
