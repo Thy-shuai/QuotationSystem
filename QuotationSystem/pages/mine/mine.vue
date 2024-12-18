@@ -143,7 +143,8 @@
 
 				// 计算时间差（以天为单位）
 				const timeDifference = nowDate - targetDate;
-
+				
+				// 根据时间差值进行显示的判断
 				if (nowYear === targetYear && nowMonth === targetMonth && nowDate === targetDate) {
 					const hours = targetTime.getHours().toString().padStart(2, '0');
 					const minutes = targetTime.getMinutes().toString().padStart(2, '0');
@@ -334,6 +335,7 @@
 		width: 86%;
 		height: 100%;
 		// background-color: cadetblue;
+		// background-color: $uni-color-title;
 	}
 
 	.top_name {

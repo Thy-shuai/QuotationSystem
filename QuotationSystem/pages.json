@@ -371,6 +371,14 @@
 			{
 				"navigationBarTitleText" : "规格列表"
 			}
+		},
+		{
+			"path" : "pages/passwordCollection/passwordCollection",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"navigationStyle": "custom"
+			}
 		}
 	
     ],
