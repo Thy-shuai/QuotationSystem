@@ -379,6 +379,13 @@
 				"navigationBarTitleText" : "",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path" : "pages/passwordCollectionDisplay/passwordCollectionDisplay",
+			"style" : 
+			{
+				"navigationBarTitleText" : "信息记录"
+			}
 		}
 	
     ],
