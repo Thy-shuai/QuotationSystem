@@ -386,6 +386,13 @@
 			{
 				"navigationBarTitleText" : "信息记录"
 			}
+		},
+		{
+			"path" : "pages/passwordCollectionModify/passwordCollectionModify",
+			"style" : 
+			{
+				"navigationBarTitleText" : ""
+			}
 		}
 	
     ],
